@@ -1,0 +1,591 @@
+Index: src/br/com/alura/Clase3.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/br/com/alura/Clase3.java b/src/br/com/alura/Clase3.java
+new file mode 100644
+--- /dev/null	(date 1679936173972)
++++ b/src/br/com/alura/Clase3.java	(date 1679936173972)
+@@ -0,0 +1,51 @@
++package br.com.alura;
++
++import java.util.ArrayList;
++import java.util.Collections;
++import java.util.Comparator;
++import java.util.List;
++import java.util.stream.Collectors;
++
++public class Clase3 {
++    public static void main(String[] args) {
++
++        String curso1 = "Geometria";
++        String curso2 = "Fisica";
++        String curso3 = "Quimica";
++        String curso4 = "Historia";
++
++        ArrayList <String> cursos = new ArrayList<>();
++
++        cursos.add(curso1);
++        cursos.add(curso2);
++        cursos.add(curso3);
++        cursos.add(curso4);
++
++       /* //se utliza para ordenar collections,sort,stream
++
++       System.out.println(cursos);
++        //ordenar de forma ascendente
++        Collections.sort(cursos);
++        System.out.println(cursos);
++
++        //ordenar de forma descendente
++        Collections.sort(cursos,Collections.reverseOrder() );
++        System.out.println(cursos);*/
++
++       /* cursos.sort(Comparator.reverseOrder());  //orden menor a mayor
++        System.out.println(cursos);
++
++        cursos.sort(Comparator.naturalOrder()); //orden natural
++        System.out.println(cursos);*/
++
++        //listas
++        List<String>cursoList = cursos.stream().sorted().collect(Collectors.toList());
++        System.out.println(cursoList);
++
++        List<String> cursosList = cursos.stream().sorted(Comparator.reverseOrder()).collect(Collectors.toList());
++        System.out.println(cursosList);
++
++
++        }
++            
++        }
+Index: src/br/com/alura/Curso.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/br/com/alura/Curso.java b/src/br/com/alura/Curso.java
+new file mode 100644
+--- /dev/null	(date 1679954409842)
++++ b/src/br/com/alura/Curso.java	(date 1679954409842)
+@@ -0,0 +1,37 @@
++package br.com.alura;
++
++public class Curso {
++
++    private String nombre;
++    private int tiempo;
++
++    public Curso(String nombre, int tiempo) {
++        this.nombre = nombre;
++        this.tiempo = tiempo;
++    }
++
++    public String getNombre() {
++        return nombre;
++    }
++
++    public void setNombre(String nombre) {
++        this.nombre = nombre;
++    }
++
++    public int getTiempo() {
++        return tiempo;
++    }
++
++    public void setTiempo(int tiempo) {
++        this.tiempo = tiempo;
++    }
++    @Override
++    public String toString(){
++        return this.nombre;
++    }
++
++   /* @Override
++    public int compareTo(Curso o) {
++        return this.nombre.compareTo(o.getNombre());
++    }*/
++}
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"4a109d2a-9403-4d23-8488-0dc8cd3f4959\" name=\"Changes\" comment=\"\">\r\n      <change afterPath=\"$PROJECT_DIR$/.gitignore\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/.idea/misc.xml\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/.idea/modules.xml\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/.idea/vcs.xml\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/alura.iml\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Main.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/br/com/alura/Ejemplo1.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/br/com/alura/Ejemplo2.java\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2NWzBkLAzJoITAt8SBUrP7i1UBo\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"RunOnceActivity.OpenProjectViewOnStart\": \"true\",\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"WebServerToolWindowFactoryState\": \"false\",\r\n    \"node.js.detected.package.eslint\": \"true\",\r\n    \"node.js.detected.package.tslint\": \"true\",\r\n    \"node.js.selected.package.eslint\": \"(autodetect)\",\r\n    \"node.js.selected.package.tslint\": \"(autodetect)\",\r\n    \"vue.rearranger.settings.migration\": \"true\"\r\n  }\r\n}]]></component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"CopyClassDialog.RECENTS_KEY\">\r\n      <recent name=\"br.com.alura\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunManager\" selected=\"Application.Ejemplo2\">\r\n    <configuration name=\"Ejemplo1\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"br.com.alura.Ejemplo1\" />\r\n      <module name=\"alura\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"br.com.alura.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"Ejemplo2\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"br.com.alura.Ejemplo2\" />\r\n      <module name=\"alura\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"br.com.alura.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"Application.Ejemplo2\" />\r\n        <item itemvalue=\"Application.Ejemplo1\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"4a109d2a-9403-4d23-8488-0dc8cd3f4959\" name=\"Changes\" comment=\"\" />\r\n      <created>1679794495509</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1679794495509</updated>\r\n      <workItem from=\"1679794496737\" duration=\"2775000\" />\r\n    </task>\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 69e5fbbd844c212da9b3f943d6d672d574ce4e87)
++++ b/.idea/workspace.xml	(date 1679954589888)
+@@ -4,16 +4,15 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="4a109d2a-9403-4d23-8488-0dc8cd3f4959" name="Changes" comment="">
+-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/alura.iml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/br/com/alura/Ejemplo1.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/br/com/alura/Ejemplo2.java" afterDir="false" />
++    <list default="true" id="4a109d2a-9403-4d23-8488-0dc8cd3f4959" name="Changes" comment="ejemplos01_02">
++      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/br/com/alura/Clase3.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/br/com/alura/Clase4.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/br/com/alura/Clase5.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/br/com/alura/Curso.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/br/com/alura/Ejemplo1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/alura/Clase1.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/br/com/alura/Ejemplo2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/alura/Clase2.java" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -28,13 +27,46 @@
+     </option>
+   </component>
+   <component name="Git.Settings">
++    <option name="RECENT_BRANCH_BY_REPOSITORY">
++      <map>
++        <entry key="$PROJECT_DIR$" value="master" />
++      </map>
++    </option>
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+   </component>
++  <component name="GitToolBoxStore">
++    <option name="projectConfigVersion" value="5" />
++    <option name="recentBranches">
++      <RecentBranches>
++        <option name="branchesForRepo">
++          <list>
++            <RecentBranchesForRepo>
++              <option name="branches">
++                <list>
++                  <RecentBranch>
++                    <option name="branchName" value="ejemplos_Alura" />
++                    <option name="lastUsedInstant" value="1679797912" />
++                  </RecentBranch>
++                  <RecentBranch>
++                    <option name="branchName" value="master" />
++                    <option name="lastUsedInstant" value="1679797911" />
++                  </RecentBranch>
++                </list>
++              </option>
++              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$" />
++            </RecentBranchesForRepo>
++          </list>
++        </option>
++      </RecentBranches>
++    </option>
++  </component>
+   <component name="MarkdownSettingsMigration">
+     <option name="stateVersion" value="1" />
+   </component>
+   <component name="ProjectId" id="2NWzBkLAzJoITAt8SBUrP7i1UBo" />
+-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
++  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
++    <ConfirmationsSetting value="2" id="Add" />
++  </component>
+   <component name="ProjectViewState">
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+@@ -43,11 +75,13 @@
+   "keyToString": {
+     "RunOnceActivity.OpenProjectViewOnStart": "true",
+     "RunOnceActivity.ShowReadmeOnStart": "true",
++    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+     "WebServerToolWindowFactoryState": "false",
+     "node.js.detected.package.eslint": "true",
+     "node.js.detected.package.tslint": "true",
+     "node.js.selected.package.eslint": "(autodetect)",
+     "node.js.selected.package.tslint": "(autodetect)",
++    "settings.editor.selected.configurable": "preferences.keymap",
+     "vue.rearranger.settings.migration": "true"
+   }
+ }]]></component>
+@@ -56,9 +90,9 @@
+       <recent name="br.com.alura" />
+     </key>
+   </component>
+-  <component name="RunManager" selected="Application.Ejemplo2">
+-    <configuration name="Ejemplo1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+-      <option name="MAIN_CLASS_NAME" value="br.com.alura.Ejemplo1" />
++  <component name="RunManager" selected="Application.Clase5">
++    <configuration name="Clase1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
++      <option name="MAIN_CLASS_NAME" value="br.com.alura.Clase1" />
+       <module name="alura" />
+       <extension name="coverage">
+         <pattern>
+@@ -70,8 +104,47 @@
+         <option name="Make" enabled="true" />
+       </method>
+     </configuration>
+-    <configuration name="Ejemplo2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+-      <option name="MAIN_CLASS_NAME" value="br.com.alura.Ejemplo2" />
++    <configuration name="Clase2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
++      <option name="MAIN_CLASS_NAME" value="br.com.alura.Clase2" />
++      <module name="alura" />
++      <extension name="coverage">
++        <pattern>
++          <option name="PATTERN" value="br.com.alura.*" />
++          <option name="ENABLED" value="true" />
++        </pattern>
++      </extension>
++      <method v="2">
++        <option name="Make" enabled="true" />
++      </method>
++    </configuration>
++    <configuration name="Clase3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
++      <option name="MAIN_CLASS_NAME" value="br.com.alura.Clase3" />
++      <module name="alura" />
++      <extension name="coverage">
++        <pattern>
++          <option name="PATTERN" value="br.com.alura.*" />
++          <option name="ENABLED" value="true" />
++        </pattern>
++      </extension>
++      <method v="2">
++        <option name="Make" enabled="true" />
++      </method>
++    </configuration>
++    <configuration name="Clase4" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
++      <option name="MAIN_CLASS_NAME" value="br.com.alura.Clase4" />
++      <module name="alura" />
++      <extension name="coverage">
++        <pattern>
++          <option name="PATTERN" value="br.com.alura.*" />
++          <option name="ENABLED" value="true" />
++        </pattern>
++      </extension>
++      <method v="2">
++        <option name="Make" enabled="true" />
++      </method>
++    </configuration>
++    <configuration name="Clase5" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
++      <option name="MAIN_CLASS_NAME" value="br.com.alura.Clase5" />
+       <module name="alura" />
+       <extension name="coverage">
+         <pattern>
+@@ -85,8 +158,11 @@
+     </configuration>
+     <recent_temporary>
+       <list>
+-        <item itemvalue="Application.Ejemplo2" />
+-        <item itemvalue="Application.Ejemplo1" />
++        <item itemvalue="Application.Clase5" />
++        <item itemvalue="Application.Clase4" />
++        <item itemvalue="Application.Clase3" />
++        <item itemvalue="Application.Clase2" />
++        <item itemvalue="Application.Clase1" />
+       </list>
+     </recent_temporary>
+   </component>
+@@ -98,11 +174,48 @@
+       <option name="number" value="Default" />
+       <option name="presentableId" value="Default" />
+       <updated>1679794495509</updated>
+-      <workItem from="1679794496737" duration="2775000" />
++      <workItem from="1679794496737" duration="3440000" />
++      <workItem from="1679929753689" duration="3549000" />
++      <workItem from="1679938411413" duration="400000" />
++      <workItem from="1679938840806" duration="6648000" />
++    </task>
++    <task id="LOCAL-00001" summary="ejemplos01_02">
++      <created>1679797887611</created>
++      <option name="number" value="00001" />
++      <option name="presentableId" value="LOCAL-00001" />
++      <option name="project" value="LOCAL" />
++      <updated>1679797887611</updated>
+     </task>
++    <task id="LOCAL-00002" summary="ejemplos01_02">
++      <created>1679798009931</created>
++      <option name="number" value="00002" />
++      <option name="presentableId" value="LOCAL-00002" />
++      <option name="project" value="LOCAL" />
++      <updated>1679798009931</updated>
++    </task>
++    <option name="localTasksCounter" value="3" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+     <option name="version" value="3" />
+   </component>
++  <component name="Vcs.Log.Tabs.Properties">
++    <option name="TAB_STATES">
++      <map>
++        <entry key="MAIN">
++          <value>
++            <State />
++          </value>
++        </entry>
++      </map>
++    </option>
++  </component>
++  <component name="VcsManagerConfiguration">
++    <MESSAGE value="ejemplos01_02" />
++    <option name="LAST_COMMIT_MESSAGE" value="ejemplos01_02" />
++  </component>
++  <component name="XSLT-Support.FileAssociations.UIState">
++    <expand />
++    <select />
++  </component>
+ </project>
+\ No newline at end of file
+Index: src/br/com/alura/Ejemplo2.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/br/com/alura/Ejemplo2.java b/src/br/com/alura/Clase2.java
+rename from src/br/com/alura/Ejemplo2.java
+rename to src/br/com/alura/Clase2.java
+--- a/src/br/com/alura/Ejemplo2.java	(revision 69e5fbbd844c212da9b3f943d6d672d574ce4e87)
++++ b/src/br/com/alura/Clase2.java	(date 1679934619900)
+@@ -2,7 +2,7 @@
+ 
+ import java.util.ArrayList;
+ 
+-public class Ejemplo2 {
++public class Clase2 {
+     public static void main(String[] args) {
+ 
+         String variable1 = "Clase 1";
+Index: src/br/com/alura/Ejemplo1.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/br/com/alura/Ejemplo1.java b/src/br/com/alura/Clase1.java
+rename from src/br/com/alura/Ejemplo1.java
+rename to src/br/com/alura/Clase1.java
+--- a/src/br/com/alura/Ejemplo1.java	(revision 69e5fbbd844c212da9b3f943d6d672d574ce4e87)
++++ b/src/br/com/alura/Clase1.java	(date 1679934619870)
+@@ -2,7 +2,7 @@
+ 
+ import java.util.ArrayList;
+ 
+-public class Ejemplo1 {
++public class Clase1 {
+     public static void main(String[] args) {
+ 
+         String variable1 = "Ejemplo 1";
+Index: src/br/com/alura/Clase4.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/br/com/alura/Clase4.java b/src/br/com/alura/Clase4.java
+new file mode 100644
+--- /dev/null	(date 1679951160922)
++++ b/src/br/com/alura/Clase4.java	(date 1679951160922)
+@@ -0,0 +1,27 @@
++package br.com.alura;
++
++import java.util.ArrayList;
++import java.util.Comparator;
++import java.util.List;
++import java.util.stream.Collectors;
++
++public class Clase4 {
++
++    //Creando listas con Objetos
++    public static void main(String[] args) {
++
++        Curso curso1 = new Curso("Geometria", 30);
++        Curso curso2 = new Curso("Fisica", 10);
++        Curso curso3 = new Curso("Quimica", 20);
++        Curso curso4 = new Curso("Historia", 50);
++
++        ArrayList<Curso> cursos = new ArrayList<>();
++        cursos.add(curso1);
++        cursos.add(curso2);
++        cursos.add(curso3);
++        cursos.add(curso4);
++
++        System.out.println(cursos);
++
++    }
++}
+\ No newline at end of file
+Index: src/br/com/alura/Clase5.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/br/com/alura/Clase5.java b/src/br/com/alura/Clase5.java
+new file mode 100644
+--- /dev/null	(date 1679954589794)
++++ b/src/br/com/alura/Clase5.java	(date 1679954589794)
+@@ -0,0 +1,35 @@
++package br.com.alura;
++
++import java.util.ArrayList;
++import java.util.Collections;
++import java.util.Comparator;
++import java.util.List;
++import java.util.stream.Collectors;
++
++public class Clase5 {
++
++    //Métodos adicionales
++    public static void main(String[] args) {
++
++        Curso curso1 = new Curso("PHP", 30);
++        Curso curso2 = new Curso("Ruby", 10);
++        Curso curso3 = new Curso("JavaScript", 20);
++        Curso curso4 = new Curso("Java", 50);
++
++        ArrayList<Curso> cursos = new ArrayList<>();
++        cursos.add(curso1);
++        cursos.add(curso2);
++        cursos.add(curso3);
++        cursos.add(curso4);
++
++        System.out.println(cursos);
++       /* Collections.sort(cursos);
++        Collections.sort(cursos, Collections.reverseOrder());
++
++        System.out.println(cursos);*/
++        //retorna una lista nueva
++        List<Curso> cursoList = cursos.stream().filter(curso -> !curso.getNombre().equalsIgnoreCase("PHP")).sorted(Comparator.comparing(Curso::getNombre).reversed()).collect(Collectors.toList());
++        System.out.println(cursoList);
++
++    }
++}
+\ No newline at end of file
+Index: .idea/uiDesigner.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/uiDesigner.xml b/.idea/uiDesigner.xml
+new file mode 100644
+--- /dev/null	(date 1679934620075)
++++ b/.idea/uiDesigner.xml	(date 1679934620075)
+@@ -0,0 +1,124 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="Palette2">
++    <group name="Swing">
++      <item class="com.intellij.uiDesigner.HSpacer" tooltip-text="Horizontal Spacer" icon="/com/intellij/uiDesigner/icons/hspacer.svg" removable="false" auto-create-binding="false" can-attach-label="false">
++        <default-constraints vsize-policy="1" hsize-policy="6" anchor="0" fill="1" />
++      </item>
++      <item class="com.intellij.uiDesigner.VSpacer" tooltip-text="Vertical Spacer" icon="/com/intellij/uiDesigner/icons/vspacer.svg" removable="false" auto-create-binding="false" can-attach-label="false">
++        <default-constraints vsize-policy="6" hsize-policy="1" anchor="0" fill="2" />
++      </item>
++      <item class="javax.swing.JPanel" icon="/com/intellij/uiDesigner/icons/panel.svg" removable="false" auto-create-binding="false" can-attach-label="false">
++        <default-constraints vsize-policy="3" hsize-policy="3" anchor="0" fill="3" />
++      </item>
++      <item class="javax.swing.JScrollPane" icon="/com/intellij/uiDesigner/icons/scrollPane.svg" removable="false" auto-create-binding="false" can-attach-label="true">
++        <default-constraints vsize-policy="7" hsize-policy="7" anchor="0" fill="3" />
++      </item>
++      <item class="javax.swing.JButton" icon="/com/intellij/uiDesigner/icons/button.svg" removable="false" auto-create-binding="true" can-attach-label="false">
++        <default-constraints vsize-policy="0" hsize-policy="3" anchor="0" fill="1" />
++        <initial-values>
++          <property name="text" value="Button" />
++        </initial-values>
++      </item>
++      <item class="javax.swing.JRadioButton" icon="/com/intellij/uiDesigner/icons/radioButton.svg" removable="false" auto-create-binding="true" can-attach-label="false">
++        <default-constraints vsize-policy="0" hsize-policy="3" anchor="8" fill="0" />
++        <initial-values>
++          <property name="text" value="RadioButton" />
++        </initial-values>
++      </item>
++      <item class="javax.swing.JCheckBox" icon="/com/intellij/uiDesigner/icons/checkBox.svg" removable="false" auto-create-binding="true" can-attach-label="false">
++        <default-constraints vsize-policy="0" hsize-policy="3" anchor="8" fill="0" />
++        <initial-values>
++          <property name="text" value="CheckBox" />
++        </initial-values>
++      </item>
++      <item class="javax.swing.JLabel" icon="/com/intellij/uiDesigner/icons/label.svg" removable="false" auto-create-binding="false" can-attach-label="false">
++        <default-constraints vsize-policy="0" hsize-policy="0" anchor="8" fill="0" />
++        <initial-values>
++          <property name="text" value="Label" />
++        </initial-values>
++      </item>
++      <item class="javax.swing.JTextField" icon="/com/intellij/uiDesigner/icons/textField.svg" removable="false" auto-create-binding="true" can-attach-label="true">
++        <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1">
++          <preferred-size width="150" height="-1" />
++        </default-constraints>
++      </item>
++      <item class="javax.swing.JPasswordField" icon="/com/intellij/uiDesigner/icons/passwordField.svg" removable="false" auto-create-binding="true" can-attach-label="true">
++        <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1">
++          <preferred-size width="150" height="-1" />
++        </default-constraints>
++      </item>
++      <item class="javax.swing.JFormattedTextField" icon="/com/intellij/uiDesigner/icons/formattedTextField.svg" removable="false" auto-create-binding="true" can-attach-label="true">
++        <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1">
++          <preferred-size width="150" height="-1" />
++        </default-constraints>
++      </item>
++      <item class="javax.swing.JTextArea" icon="/com/intellij/uiDesigner/icons/textArea.svg" removable="false" auto-create-binding="true" can-attach-label="true">
++        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
++          <preferred-size width="150" height="50" />
++        </default-constraints>
++      </item>
++      <item class="javax.swing.JTextPane" icon="/com/intellij/uiDesigner/icons/textPane.svg" removable="false" auto-create-binding="true" can-attach-label="true">
++        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
++          <preferred-size width="150" height="50" />
++        </default-constraints>
++      </item>
++      <item class="javax.swing.JEditorPane" icon="/com/intellij/uiDesigner/icons/editorPane.svg" removable="false" auto-create-binding="true" can-attach-label="true">
++        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
++          <preferred-size width="150" height="50" />
++        </default-constraints>
++      </item>
++      <item class="javax.swing.JComboBox" icon="/com/intellij/uiDesigner/icons/comboBox.svg" removable="false" auto-create-binding="true" can-attach-label="true">
++        <default-constraints vsize-policy="0" hsize-policy="2" anchor="8" fill="1" />
++      </item>
++      <item class="javax.swing.JTable" icon="/com/intellij/uiDesigner/icons/table.svg" removable="false" auto-create-binding="true" can-attach-label="false">
++        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
++          <preferred-size width="150" height="50" />
++        </default-constraints>
++      </item>
++      <item class="javax.swing.JList" icon="/com/intellij/uiDesigner/icons/list.svg" removable="false" auto-create-binding="true" can-attach-label="false">
++        <default-constraints vsize-policy="6" hsize-policy="2" anchor="0" fill="3">
++          <preferred-size width="150" height="50" />
++        </default-constraints>
++      </item>
++      <item class="javax.swing.JTree" icon="/com/intellij/uiDesigner/icons/tree.svg" removable="false" auto-create-binding="true" can-attach-label="false">
++        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
++          <preferred-size width="150" height="50" />
++        </default-constraints>
++      </item>
++      <item class="javax.swing.JTabbedPane" icon="/com/intellij/uiDesigner/icons/tabbedPane.svg" removable="false" auto-create-binding="true" can-attach-label="false">
++        <default-constraints vsize-policy="3" hsize-policy="3" anchor="0" fill="3">
++          <preferred-size width="200" height="200" />
++        </default-constraints>
++      </item>
++      <item class="javax.swing.JSplitPane" icon="/com/intellij/uiDesigner/icons/splitPane.svg" removable="false" auto-create-binding="false" can-attach-label="false">
++        <default-constraints vsize-policy="3" hsize-policy="3" anchor="0" fill="3">
++          <preferred-size width="200" height="200" />
++        </default-constraints>
++      </item>
++      <item class="javax.swing.JSpinner" icon="/com/intellij/uiDesigner/icons/spinner.svg" removable="false" auto-create-binding="true" can-attach-label="true">
++        <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1" />
++      </item>
++      <item class="javax.swing.JSlider" icon="/com/intellij/uiDesigner/icons/slider.svg" removable="false" auto-create-binding="true" can-attach-label="false">
++        <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1" />
++      </item>
++      <item class="javax.swing.JSeparator" icon="/com/intellij/uiDesigner/icons/separator.svg" removable="false" auto-create-binding="false" can-attach-label="false">
++        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3" />
++      </item>
++      <item class="javax.swing.JProgressBar" icon="/com/intellij/uiDesigner/icons/progressbar.svg" removable="false" auto-create-binding="true" can-attach-label="false">
++        <default-constraints vsize-policy="0" hsize-policy="6" anchor="0" fill="1" />
++      </item>
++      <item class="javax.swing.JToolBar" icon="/com/intellij/uiDesigner/icons/toolbar.svg" removable="false" auto-create-binding="false" can-attach-label="false">
++        <default-constraints vsize-policy="0" hsize-policy="6" anchor="0" fill="1">
++          <preferred-size width="-1" height="20" />
++        </default-constraints>
++      </item>
++      <item class="javax.swing.JToolBar$Separator" icon="/com/intellij/uiDesigner/icons/toolbarSeparator.svg" removable="false" auto-create-binding="false" can-attach-label="false">
++        <default-constraints vsize-policy="0" hsize-policy="0" anchor="0" fill="1" />
++      </item>
++      <item class="javax.swing.JScrollBar" icon="/com/intellij/uiDesigner/icons/scrollbar.svg" removable="false" auto-create-binding="true" can-attach-label="false">
++        <default-constraints vsize-policy="6" hsize-policy="0" anchor="0" fill="2" />
++      </item>
++    </group>
++  </component>
++</project>
+\ No newline at end of file
