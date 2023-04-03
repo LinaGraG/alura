@@ -4,15 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4a109d2a-9403-4d23-8488-0dc8cd3f4959" name="Changes" comment="Clases 8-9">
-      <change afterPath="$PROJECT_DIR$/src/br/com/alura/Clase11.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/br/com/alura/Clase12.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/br/com/alura/Clase13.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/br/com/alura/Clase14.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/br/com/alura/Clase15.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/br/com/alura/model/Alumno.java" afterDir="false" />
+    <list default="true" id="4a109d2a-9403-4d23-8488-0dc8cd3f4959" name="Changes" comment="Clases 10-15">
+      <change afterPath="$PROJECT_DIR$/src/br/com/alura/Clase16.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/br/com/alura/Clase17.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/br/com/alura/Clase18.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/br/com/alura/Clase19.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/com/alura/Clase10.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/alura/Clase10.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/br/com/alura/model/Curso.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/alura/model/Curso.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -105,46 +102,7 @@
       <recent name="br.com.alura.model" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Clase15">
-    <configuration name="Clase11" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="br.com.alura.Clase11" />
-      <module name="alura" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="br.com.alura.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Clase12" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="br.com.alura.Clase12" />
-      <module name="alura" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="br.com.alura.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Clase13" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="br.com.alura.Clase13" />
-      <module name="alura" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="br.com.alura.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.Clase19">
     <configuration name="Clase14" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="br.com.alura.Clase14" />
       <module name="alura" />
@@ -171,13 +129,52 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Clase16" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="br.com.alura.Clase16" />
+      <module name="alura" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.com.alura.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Clase18" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="br.com.alura.Clase18" />
+      <module name="alura" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.com.alura.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Clase19" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="br.com.alura.Clase19" />
+      <module name="alura" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.com.alura.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Clase19" />
+        <item itemvalue="Application.Clase18" />
+        <item itemvalue="Application.Clase16" />
         <item itemvalue="Application.Clase15" />
         <item itemvalue="Application.Clase14" />
-        <item itemvalue="Application.Clase13" />
-        <item itemvalue="Application.Clase12" />
-        <item itemvalue="Application.Clase11" />
       </list>
     </recent_temporary>
   </component>
@@ -198,7 +195,8 @@
       <workItem from="1680225100794" duration="130000" />
       <workItem from="1680274795750" duration="56000" />
       <workItem from="1680274860971" duration="988000" />
-      <workItem from="1680280423056" duration="10566000" />
+      <workItem from="1680280423056" duration="10598000" />
+      <workItem from="1680529084198" duration="5190000" />
     </task>
     <task id="LOCAL-00001" summary="ejemplos01_02">
       <created>1679797887611</created>
@@ -242,7 +240,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680225198891</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Clases 10-15">
+      <created>1680310133541</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1680310133541</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -264,7 +269,23 @@
     <MESSAGE value="Clases1-5" />
     <MESSAGE value="Clases 5-7" />
     <MESSAGE value="Clases 8-9" />
-    <option name="LAST_COMMIT_MESSAGE" value="Clases 8-9" />
+    <MESSAGE value="Clases 10-15" />
+    <option name="LAST_COMMIT_MESSAGE" value="Clases 10-15" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/br/com/alura/Clase16.java</url>
+          <line>13</line>
+          <properties class="br.com.alura.Clase16" method="main">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
